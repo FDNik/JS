@@ -1,0 +1,44 @@
+body {
+background: no-repeat url('abstract.jpg');
+background-size: cover;
+}
+
+#reset {
+	border:solid 3px black;
+	background-color:gray;
+	color: black;
+  font-size:50px;
+  font-weight: bold;
+  font-family: gost type au;
+	margin-top: 10px;
+}
+#reset:hover {
+	color:white;
+	cursor: hand;
+}
+
+
+td {
+	text-align:center;
+	font-family: gost type au;
+	color: gray;
+	vertical-align: middle;
+}
+#space td {
+  margin: auto;
+  empty-cells: hide;
+  background-color: gray;
+	border:solid 3px black;
+	text-align:center;
+	font-size:70px;
+	font-family: gost type au;
+  font-weight: bold;
+	color: black;
+	width: 100px;
+	height: 100px;
+}
+
+#space td:hover {
+	color:white;
+	cursor: hand;
+}
