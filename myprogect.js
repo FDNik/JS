@@ -54,8 +54,6 @@ function game() {
 		var row = document.createElement("tr");
 		for(j = 0; j < 4; ++j){
 			var cell = document.createElement("td");
-				cell.id = i + " " + j;
-				//cell.onclick = cellClick;
 				cell.innerHTML = arr[i][j];
 				row.appendChild(cell);
 		}
