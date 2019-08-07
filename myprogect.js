@@ -3,6 +3,7 @@ var space;
 var empti;
 var emptj;
 
+
 //функция загрузки страницы
 window.onload = function() {
   space = document.getElementById("space");
@@ -48,12 +49,15 @@ function game() {
     }
   }
 
+
 //формирование игрового поля
   var table = document.createElement("table");
   for(i = 0; i < 4; ++i){
 		var row = document.createElement("tr");
 		for(j = 0; j < 4; ++j){
 			var cell = document.createElement("td");
+        cell.id = i + " " + j;
+        cell.onclick = clc;
 				cell.innerHTML = arr[i][j];
 				row.appendChild(cell);
 		}
@@ -67,4 +71,29 @@ function game() {
   //вывод нового игрового поля на странице
   space.appendChild(table);
 
+
+}
+
+//обработка щелчка мыши и проверка на выигрышную комбинацию
+function clc(){
+  celCl = window.event.target;
+  i = celCl.id.charAt(0);
+  j = celCl.id.charAt(2);
+
+  if ((i == empti && Math.abs(j - emptj) == 1) || (j == emptj && Math.abs(i - empti) == 1)) {
+    document.getElementById(empti + " " +emptj).innerHTML = celCl.innerHTML;
+    celCl.innerHTML = "";
+    empti = i;
+    emptj = j;
+    var vic = true;
+    for (i = 0; i < 4; i++) {
+      for (j = 0; j < 4; j++) {
+        if (i + j !=6 && document.getElementById(i + " " + j).innerHTML != 4*i + j + 1) {
+          vic = false;
+          break;
+        }
+      }
+    }
+  if (vic == true) alert("Победа");
+  }
 }

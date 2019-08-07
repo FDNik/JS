@@ -1,7 +1,18 @@
 body {
 background: no-repeat url('abstract.jpg');
 background-size: cover;
+text-align: center;
 }
+
+
+#space table {
+	margin: 50 auto;
+	align: center;
+	border:solid 5px black;
+	width: 450px;
+	height: 450px;
+}
+
 
 #reset {
 	border:solid 3px black;
@@ -10,8 +21,9 @@ background-size: cover;
   font-size:50px;
   font-weight: bold;
   font-family: gost type au;
-	margin-top: 10px;
 }
+
+
 #reset:hover {
 	color:white;
 	cursor: hand;
@@ -23,7 +35,10 @@ td {
 	font-family: gost type au;
 	color: gray;
 	vertical-align: middle;
+	user-select: none;
 }
+
+
 #space td {
   margin: auto;
   empty-cells: hide;
